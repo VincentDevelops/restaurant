@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
     mode: "development",
-    entry: "./src/modules/index.js",
+    entry: "./src/index.js",
     output: {
         path: path.resolve(import.meta.dirname, "dist"),
         filename: "main.js",

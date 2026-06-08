@@ -24,7 +24,7 @@
     <section class="home-page-container flex">
 
         <div class="page-welcome">
-            <div class="welcome">
+            <div class="welcome flex">
                 <h1>Vince's Place</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rerum non veniam suscipit
                     voluptatibus!
@@ -58,43 +58,90 @@
                                 alt="dropdown arrow">
                         </button></li>
                 </ul>
-                <button class="reservation-button find-table-button">Find a Table</button>
+                <button class="reservation-button find-table-button">Reserve a Table</button>
             </div>
 
         </div>
 
-        <div class="food-options flex">
+        <div class="food-options-container flex">
             <h1>Look at this food</h1>
-            <div class="card">
-                <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png" alt="burger image">
-                <h4>Berries!</h4>
-                <p>All the berries to stuff your face with. Just do it!</p>
+            <div class="food-options grid">
+                <div class="card">
+                    <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png"
+                        alt="burger image">
+                    <h3>Berries!</h3>
+                    <p>All the berries to stuff your face with. Just do it!</p>
+                </div>
+                <div class="card">
+                    <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png"
+                        alt="burger image">
+                    <h4>Berries!</h4>
+                    <p>All the berries to stuff your face with. Just do it!</p>
+                </div>
+                <div class="card">
+                    <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png"
+                        alt="burger image">
+                    <h4>Berries!</h4>
+                    <p>All the berries to stuff your face with. Just do it!</p>
+                </div>
             </div>
-            <div class="card">
-                <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png" alt="burger image">
-                <h4>Berries!</h4>
-                <p>All the berries to stuff your face with. Just do it!</p>
-            </div>
-            <div class="card">
-                <img class="card-image-container" src="./assets/md-osman-gani-burger-8307053.png" alt="burger image">
-                <h4>Berries!</h4>
-                <p>All the berries to stuff your face with. Just do it!</p>
-            </div>
+            <button class="button-view-menu">View Menu</button>
+        </div>
 
 
-            <div class="reviews">
-                <h1>Look at these Reviews</h1>
-                <div class="review-card">
-                    <h2>"A fantastic bit of feedback</h2>
-                    <div class="review-card-image-container"></div>
-                    <div class="reviewer-information">
-                        <h4>Name</h4>
-                        <span>Description</span>
+
+        <div class="reviews grid">
+            <h1>Look at these Reviews</h1>
+            <div class="review-card">
+                <h3>"A fantastic bit of feedback</h3>
+                <div class="reviewer-container flex">
+                    <img class="review-image" src="./assets/selfie.jpg" alt="user-image">
+                    <div class="review-info flex">
+                        <h4 class="review-name">Name</h4>
+                        <span class="review-description">Description</span>
+
                     </div>
                 </div>
             </div>
+        </div>
 
     </section>
+
+    <footer class="container-footer flex">
+        <div class="my-information flex">
+            <h1>Find Vince At</h1>
+            <div class="my-links flex">
+                <a class="my-link" href="https://vincentdevelops.com">
+                    <h4>VincentDevelops.com</h4>
+                </a>
+                <a class="my-link git-link" href="https://github.com/vincentdevelops">
+                    <h4>
+                        GitHub
+                    </h4>
+                </a>
+            </div>
+        </div>
+        <div class="footer-links flex">
+            <ul class="link-col flex">
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+            </ul>
+            <ul class="link-col flex">
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+            </ul>
+            <ul class="link-col flex">
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+                <li class="link">link</li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 
