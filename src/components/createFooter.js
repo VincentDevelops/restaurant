@@ -21,7 +21,7 @@ export const createFooter = () => {
 
     const gitLink = document.createElement("a");
     gitLink.classList.add("my-link", "git-link");
-    gitLink.href = "https://github.com/vincentdevelops.com"
+    gitLink.href = "https://github.com/vincentdevelops"
     const gitH4 = document.createElement("h4");
     gitH4.textContent = "GitHub";
     gitLink.append(gitH4);

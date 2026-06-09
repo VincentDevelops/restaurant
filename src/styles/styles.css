@@ -41,6 +41,14 @@ ul {
     list-style: none;
 }
 
+button {
+    border: none;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
 
 /* =========================
    TYPOGRAPHY
@@ -69,6 +77,9 @@ p {
     opacity: 85%;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* =========================
    UTILITIES
@@ -109,6 +120,10 @@ p {
     grid-column: 2;
     justify-self: center;
     font-weight: 400;
+}
+
+.logo:hover {
+    opacity: 80%;
 }
 
 .navbar {
@@ -263,6 +278,15 @@ p {
     width: 100%;
 }
 
+.card>button {
+    width: 100%;
+    justify-self: center;
+    background-color: black;
+    color: white;
+    padding: var(--padding);
+    border-radius: 10px;
+}
+
 .card-image-container {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -340,9 +364,8 @@ p {
     flex-direction: column;
 }
 
-.menu-page-container>.card {
-    border: 2px solid red;
-}
+
+
 
 .special-card {
     padding: var(--padding);
@@ -353,8 +376,27 @@ p {
     width: 100%;
 }
 
-.welcome>p {
+.menu-page-container>.welcome>p {
     color: black;
+}
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page-container {
+    flex-direction: column;
+    width: 100%;
+    padding: var(--padding);
+    justify-content: center;
+    align-items: center;
+}
+
+.selfie {
+    width: 50%;
+    border-radius: 100%;
+
 }
 
 
@@ -379,14 +421,13 @@ p {
     align-items: center;
 }
 
-.my-links>a {
-    color: black;
-    text-decoration: none;
-}
-
 .my-links>a>h4 {
     margin: 0;
     font-weight: 400;
+}
+
+.my-link {
+    color: black;
 }
 
 .git-link {
@@ -417,6 +458,7 @@ p {
 ========================= */
 
 @media (min-width: 481px) {
+
     .nav-link {
         font-size: var(--step-1);
     }
@@ -428,7 +470,7 @@ p {
     .food-options {
         grid-template-rows: auto;
         grid-auto-rows: auto;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 10px;
     }
 
@@ -438,6 +480,32 @@ p {
 
     .footer-links {
         width: 30%;
+    }
+
+    .special-card {
+        display: flex;
+    }
+
+    .special-card>.card {
+        width: 30%;
+        flex: 1;
+        padding: var(--padding);
+        padding-top: 0;
+        padding-right: 0;
+
+    }
+
+    .special-card>.card-image-container {
+        width: 50%;
+    }
+
+    .special-card>.card>h2 {
+        margin: 0;
+    }
+
+    .selfie {
+        width: 35%;
+        border-radius: 100%;
     }
 }
 
@@ -523,4 +591,10 @@ p {
     .review-cards-container {
         grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .menu-page-container>.welcome {
+        padding: var(--padding);
+        width: 50%;
+    }
+
 }

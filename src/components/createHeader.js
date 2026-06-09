@@ -13,6 +13,7 @@ export const createHeader = (navItems, pages, menuIcon) => {
     const h1 = document.createElement("h1");
     h1.classList.add("logo", "flex");
     h1.textContent = "Vince's Place";
+    h1.dataset.page = "homePage";
 
     const nav = document.createElement("nav");
     nav.classList.add("navbar", "flex");

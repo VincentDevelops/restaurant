@@ -3,10 +3,13 @@ export const createFoodCard = (image, alt, title, description) => {
     let card = document.createElement("div");
     card.classList.add("card");
 
-    let cardImageContainer = document.createElement("img");
-    cardImageContainer.classList.add("card-image-container");
-    cardImageContainer.src = image;
-    cardImageContainer.alt = alt
+    if (image) {
+        let cardImageContainer = document.createElement("img");
+        cardImageContainer.classList.add("card-image-container");
+        cardImageContainer.src = image;
+        cardImageContainer.alt = alt
+        card.append(cardImageContainer)
+    }
 
     let cardTitle = document.createElement("h3");
     cardTitle.textContent = title;
@@ -14,9 +17,7 @@ export const createFoodCard = (image, alt, title, description) => {
     let p = document.createElement("p");
     p.textContent = description;
 
-    card.appendChild(cardImageContainer);
-    card.appendChild(cardTitle)
-    card.appendChild(p);
+    card.append(cardTitle, p);
 
     return card;
 }

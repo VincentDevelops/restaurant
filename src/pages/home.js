@@ -1,24 +1,19 @@
 import { createReservationPrompt } from "../components/createReservationPrompt.js";
 import { createReviewCard } from "../components/createReviewCard.js";
 import { createFoodCard } from "../components/createFoodCard.js";
+import { createWelcomeMessage } from "../components/createWelcomeMessage.js";
 import burgerImage from "../assets/md-osman-gani-burger-8307053.png";
 import userImage from "../assets/selfie.jpg";
 
 export const createHomePage = () => {
-    const homePage = document.createElement("section");
+    const homePage = document.createElement("section", "home");
     homePage.classList.add("home-page-container", "flex");
 
     // Welcome Page ============================================
     const pageWelcome = document.createElement("div")
     pageWelcome.classList.add("page-welcome");
-    const welcome = document.createElement("div");
-    welcome.classList.add("welcome", "flex");
-    const welcomeTitle = document.createElement("h1");
-    welcomeTitle.textContent = "Vince's Place"
-    const welcomeSubTitle = document.createElement("p");
-    welcomeSubTitle.textContent = "This is my restaurant page for the Odin Project assignment. It's responsive :)";
 
-    welcome.append(welcomeTitle, welcomeSubTitle)
+    const welcome = createWelcomeMessage("Vince's Place", "Responsive site created by me Vince. Contact me at the links found below");
 
     pageWelcome.append(welcome, createReservationPrompt());
 
