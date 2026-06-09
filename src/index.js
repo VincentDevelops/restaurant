@@ -10,8 +10,9 @@ import menuIcon from "./assets/menu_20dp_000000_FILL0_wght400_GRAD0_opsz20.svg";
 
 (() => {
     const body = document.querySelector("body");
-    let navLinks = ["555-555-5555", "Menu", "Pickup-Order", "About", "Order Now"];
-    const header = createHeader(navLinks, menuIcon);
+    const navLinks = ["555-555-5555", "Menu", "Pickup-Order", "About", "Order Now"];
+    const pages = ["number", "menuPage", "orderPage", "aboutPage", "orderPage"];
+    const header = createHeader(navLinks, pages, menuIcon);
     const home = createHomePage();
     const footer = createFooter();
 
@@ -25,4 +26,6 @@ import menuIcon from "./assets/menu_20dp_000000_FILL0_wght400_GRAD0_opsz20.svg";
         console.log("clicked");
         navbar.classList.toggle("open")
     }
+
+
 })();

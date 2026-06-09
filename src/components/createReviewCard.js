@@ -14,7 +14,7 @@ export const createReviewCard = (quote, userImage, imageAlt, name, description) 
 
 
     const card = document.createElement("div");
-    card.classList.add("review-card");
+    card.classList.add("review-card", "flex");
 
     const h3 = document.createElement("h3");
     h3.textContent = quote;

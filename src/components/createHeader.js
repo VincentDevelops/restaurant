@@ -1,4 +1,4 @@
-export const createHeader = (navItems, menuIcon) => {
+export const createHeader = (navItems, pages, menuIcon) => {
 
 
 
@@ -26,6 +26,7 @@ export const createHeader = (navItems, menuIcon) => {
         navButton.classList.add("button", "nav-link");
 
         navButton.textContent = navItems[i];
+        navButton.dataset.page = pages[i];
         listItem.append(navButton);
         linkContainer.append(listItem);
     }

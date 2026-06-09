@@ -161,8 +161,13 @@ p {
     gap: 10px;
 }
 
-.reservation-buttons {
+.reservation-buttons>li:not(:last-child) {
     display: none;
+}
+
+.reservation-buttons {
+    padding: 0;
+    margin: 0;
 }
 
 .find-table-button {
@@ -231,6 +236,7 @@ p {
     width: 100%;
     padding: var(--padding);
     grid-template-rows: 1fr auto;
+    gap: 10px;
 }
 
 .reviews>h1 {
@@ -238,21 +244,37 @@ p {
     margin-bottom: 0;
 }
 
+.review-cards-container {
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: stretch;
+
+    gap: 10px;
+
+}
+
 .review-card {
     border-radius: 5px;
     box-shadow: 0 3px 0 1px rgb(99, 99, 99, 50%);
     padding: 30px;
     border: 1px solid black;
+    flex-direction: column;
+    height: 100%;
 }
 
 .review-card>h3 {
     font-weight: 600;
-    padding: var(--padding);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+
 }
 
 .reviewer-container {
     align-items: center;
-    gap: 10px;
+    margin-top: auto;
+    border: 2px solid red;
 }
 
 .review-image {
@@ -265,13 +287,14 @@ p {
     height: 100%;
     width: 100%;
     flex-direction: column;
-
 }
 
 .review-name {
     margin: 0;
     margin-bottom: .5rem;
 }
+
+.review-description {}
 
 /* FOOTER ---------- */
 
@@ -333,6 +356,10 @@ p {
         font-size: var(--step-1);
     }
 
+    .find-table-button {
+        width: 50%;
+    }
+
     .food-options {
         grid-template-rows: auto;
         grid-auto-rows: auto;
@@ -351,6 +378,31 @@ p {
 
 @media(min-width: 930px) {
 
+    .reservation-buttons>li:not(:last-child) {
+        display: flex;
+    }
+
+    .reservation-buttons {
+        display: flex;
+        padding: 5px;
+        margin: 0;
+        justify-self: center;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .reservation-button {
+        border-radius: 0;
+    }
+
+    .reservation-options {
+        width: fit-content;
+        align-self: center;
+    }
+
+    .find-table-button {
+        width: 100%;
+    }
 
     .button-menu {
         display: none;
@@ -399,6 +451,10 @@ p {
 
     .git-link {
         margin: 0;
+    }
+
+    .review-cards-container {
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     }
 
 }

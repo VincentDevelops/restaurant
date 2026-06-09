@@ -46,13 +46,17 @@ export const createReservationPrompt = () => {
     const reservationButton3 = createReservationButton(clockIcon, "clock", "11:00 AM");
     reservationItem3.append(reservationButton3);
 
-    reservationButtons.append(reservationItem1, reservationItem2, reservationItem3);
 
+    const reservationItem4 = document.createElement("li");
     const reserveButton = document.createElement("button");
     reserveButton.classList.add("reservation-button", "find-table-button");
     reserveButton.textContent = "Reserve a Table";
+    reservationItem4.append(reserveButton);
 
-    reservationContainer.append(reservationButtons, reserveButton);
+    reservationButtons.append(reservationItem1, reservationItem2, reservationItem3, reservationItem4);
+
+
+    reservationContainer.append(reservationButtons);
 
     return reservationContainer;
 

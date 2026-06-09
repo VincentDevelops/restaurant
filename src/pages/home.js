@@ -46,9 +46,17 @@ export const createHomePage = () => {
     const reviewsTitle = document.createElement("h1");
     reviewsTitle.textContent = "Look at these Reviews";
 
-    const reviewCard1 = createReviewCard("What a delicious burger", userImage, "user photo", "Vince", "An enthusiastic customer");
+    const reviewCardsContainer = document.createElement("div");
+    reviewCardsContainer.classList.add("review-cards-container", "grid");
 
-    reviewsContainer.append(reviewsTitle, reviewCard1);
+
+
+    const reviewCard1 = createReviewCard("\"What a burger\"", userImage, "user photo", "Vince", "It's me!");
+    const reviewCard2 = createReviewCard("\"Incredible meal omg!\"", userImage, "user photo", "Vince", "this is me too!");
+    const reviewCard3 = createReviewCard("\"What a sammich!\"", userImage, "user photo", "Vince", "it's me 3!");
+    reviewCardsContainer.append(reviewCard1, reviewCard2, reviewCard3);
+
+    reviewsContainer.append(reviewsTitle, reviewCardsContainer);
 
     homePage.append(pageWelcome, foodOptionsContainer, reviewsContainer)
 
