@@ -597,4 +597,8 @@ a {
         width: 50%;
     }
 
+    .special-card>.card-image-container {
+        width: 37%;
+    }
+
 }
