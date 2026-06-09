@@ -16,7 +16,7 @@ import menuIcon from "./assets/menu_20dp_000000_FILL0_wght400_GRAD0_opsz20.svg";
     const home = createHomePage();
     const footer = createFooter();
 
-    body.append(header, home, footer);
+    body.append(header, footer);
 
 
     const menubButton = document.querySelector(".button-menu");

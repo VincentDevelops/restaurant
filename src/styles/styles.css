@@ -1,5 +1,14 @@
+/* =========================
+   IMPORTS
+========================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "./modern-normalize.css";
+
+
+/* =========================
+   VARIABLES
+========================= */
 
 :root {
     --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
@@ -14,18 +23,28 @@
     --padding: 10px;
 }
 
+
+/* =========================
+   BASE / RESET
+========================= */
+
 body {
     height: 100vh;
     width: 100vw;
-    font-family: 'Inter';
-    background-color: white;
     max-width: 1200px;
     justify-self: center;
+    font-family: 'Inter';
+    background-color: white;
 }
 
 ul {
     list-style: none;
 }
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 h1 {
     font-size: var(--step-4);
@@ -47,8 +66,13 @@ h4 {
 
 p {
     font-size: var(--step-1);
-    opacity: 70%;
+    opacity: 85%;
 }
+
+
+/* =========================
+   UTILITIES
+========================= */
 
 .flex {
     display: flex;
@@ -58,51 +82,20 @@ p {
     display: grid;
 }
 
-/* MOBILE HEADER ------------------------ */
+.hide {
+    display: none;
+}
+
+
+/* =========================
+   HEADER / NAV
+========================= */
 
 .container-header {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     position: relative;
     padding: var(--padding);
-}
-
-.navbar {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    transform: translateX(-300%);
-    transition: transform 0.2s;
-    border-bottom: 1px solid black;
-    z-index: 1;
-}
-
-.navbar.open {
-    transform: translateX(0);
-    transition: transform 0.2s;
-}
-
-.nav-links {
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-link {
-    width: 100%;
-    background-color: white;
-    height: 3rem;
-    border: none;
-}
-
-.nav-link:hover {
-    opacity: 80%;
-}
-
-.nav-links>li {
-    border-top: 1px solid black;
 }
 
 .button-menu {
@@ -118,21 +111,66 @@ p {
     font-weight: 400;
 }
 
-/* MOBILE HOME PAGE ------------ */
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateX(-300%);
+    transition: transform 0.2s;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+.navbar.open {
+    transform: translateX(0);
+}
+
+.nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links>li {
+    border-top: 1px solid black;
+}
+
+.nav-link {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    border: none;
+}
+
+.nav-link:hover {
+    opacity: 80%;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
 
 .home-page-container {
     flex-direction: column;
 }
 
+
+/* =========================
+   WELCOME / HERO
+========================= */
+
 .page-welcome {
     background: url("../assets/theocrazzolara-burger-4641173.jpg") lightgray 50% / cover no-repeat;
     display: inline-flex;
-    padding: 10px 7px 13px 7px;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    color: white;
     height: 400px;
+    padding: 10px 7px 13px 7px;
+    color: white;
 }
 
 .welcome {
@@ -140,81 +178,85 @@ p {
 }
 
 .welcome>h1 {
-    margin-bottom: 0;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .welcome>p {
     color: white;
 }
 
-.reservation-icon {
-    width: 2rem;
-}
 
-.reservation-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--step-0);
-    padding: var(--padding);
-    gap: 10px;
-}
-
-.reservation-buttons>li:not(:last-child) {
-    display: none;
-}
+/* =========================
+   RESERVATION OPTIONS
+========================= */
 
 .reservation-buttons {
     padding: 0;
     margin: 0;
 }
 
+.reservation-buttons>li:not(:last-child) {
+    display: none;
+}
+
+.reservation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: var(--padding);
+    font-size: var(--step-0);
+}
+
+.reservation-icon {
+    width: 2rem;
+}
+
 .find-table-button {
+    justify-self: center;
+    width: 70%;
+    height: 3.5rem;
+    border: none;
+    border-radius: 10px;
     background-color: white;
     color: black;
     font-size: var(--step-2);
     font-weight: 550;
-    height: 3.5rem;
-    justify-self: center;
-    width: 70%;
-    border: none;
-    border-radius: 10px;
 }
 
-.hide {
-    display: none;
-}
 
-/* food options */
+/* =========================
+   FOOD OPTIONS
+========================= */
+
 .food-options-container {
-
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 .food-options-container>h1 {
-    text-align: left;
     width: 100%;
     margin-bottom: 0;
+    text-align: left;
 }
 
 .food-options-container>.button-view-menu {
     width: 60%;
+    padding: var(--padding);
+    border-radius: 7px;
     background-color: black;
     color: white;
     font-size: var(--step-2);
-    border-radius: 7px;
-    padding: var(--padding);
 }
 
 .food-options {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: var(--padding);
     width: 100%;
+    padding: var(--padding);
 }
 
 .card {
@@ -223,25 +265,26 @@ p {
 
 .card-image-container {
     width: 100%;
-    max-height: 500px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 0;
-    border-radius: 10px;
 }
 
-/* Review Cards */
+
+/* =========================
+   REVIEWS
+========================= */
 
 .reviews {
-    width: 100%;
-    padding: var(--padding);
     grid-template-rows: 1fr auto;
     gap: 10px;
+    width: 100%;
+    padding: var(--padding);
 }
 
 .reviews>h1 {
-    text-align: left;
     margin-bottom: 0;
+    text-align: left;
 }
 
 .review-cards-container {
@@ -249,54 +292,76 @@ p {
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: stretch;
-
     gap: 10px;
-
 }
 
 .review-card {
-    border-radius: 5px;
-    box-shadow: 0 3px 0 1px rgb(99, 99, 99, 50%);
-    padding: 30px;
-    border: 1px solid black;
     flex-direction: column;
     height: 100%;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 1px rgb(99, 99, 99, 50%);
 }
 
 .review-card>h3 {
-    font-weight: 600;
+    margin: 0 0 3rem 0;
     padding: 0;
-    margin: 0;
-    margin-bottom: 3rem;
-
+    font-weight: 600;
 }
 
 .reviewer-container {
     align-items: center;
+    gap: 10px;
     margin-top: auto;
-    border: 2px solid red;
 }
 
 .review-image {
-    border-radius: 100%;
     width: 40px;
     height: 40px;
+    border-radius: 100%;
 }
 
 .review-info {
-    height: 100%;
-    width: 100%;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .review-name {
-    margin: 0;
-    margin-bottom: .5rem;
+    margin: 0 0 0.5rem 0;
 }
 
-.review-description {}
+/* =========================
+   MENU PAGE
+========================= */
 
-/* FOOTER ---------- */
+.menu-page-container {
+    flex-direction: column;
+}
+
+.menu-page-container>.card {
+    border: 2px solid red;
+}
+
+.special-card {
+    padding: var(--padding);
+}
+
+.menu-page-container>.welcome {
+    padding: var(--padding);
+    width: 100%;
+}
+
+.welcome>p {
+    color: black;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
 
 .container-footer {
     flex-direction: column;
@@ -312,46 +377,46 @@ p {
 .my-links {
     flex-direction: column;
     align-items: center;
-
 }
 
 .my-links>a {
-    text-decoration: none;
     color: black;
-    ;
+    text-decoration: none;
 }
 
 .my-links>a>h4 {
-    font-weight: 400;
     margin: 0;
+    font-weight: 400;
 }
 
-
 .git-link {
+    margin: 1rem 0 0 0;
     font-weight: 400;
-    margin: 0;
-    margin-top: 1rem;
 }
 
 .footer-links {
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .link-col {
     flex-direction: column;
     justify-content: center;
-    padding: 0;
-    width: 100%;
     gap: 15px;
+    width: 100%;
+    padding: 0;
 }
 
 .link {
     text-align: center;
-
 }
 
-@media(min-width:481px) {
+
+/* =========================
+   MEDIA QUERY: TABLET
+========================= */
+
+@media (min-width: 481px) {
     .nav-link {
         font-size: var(--step-1);
     }
@@ -376,48 +441,38 @@ p {
     }
 }
 
-@media(min-width: 930px) {
 
-    .reservation-buttons>li:not(:last-child) {
-        display: flex;
-    }
+/* =========================
+   MEDIA QUERY: DESKTOP
+========================= */
 
-    .reservation-buttons {
-        display: flex;
-        padding: 5px;
-        margin: 0;
-        justify-self: center;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .reservation-button {
-        border-radius: 0;
-    }
-
-    .reservation-options {
-        width: fit-content;
-        align-self: center;
-    }
-
-    .find-table-button {
-        width: 100%;
-    }
-
+@media (min-width: 930px) {
     .button-menu {
         display: none;
     }
 
     .container-header {
-        position: inherit;
-        align-items: center;
         display: flex;
-        width: 100%;
+        align-items: center;
         justify-content: space-between;
+        position: inherit;
+        width: 100%;
+    }
 
+    .logo {
+        font-size: var(--step-2);
+    }
+
+    .navbar {
+        position: inherit;
+        left: auto;
+        width: fit-content;
+        transform: translateX(0);
+        border: none;
     }
 
     .nav-links {
+        flex-direction: row;
         gap: 20px;
     }
 
@@ -425,20 +480,32 @@ p {
         border: none;
     }
 
-    .navbar {
-        position: inherit;
-        left: auto;
-        transform: translateX(0);
-        border: none;
+    .reservation-buttons {
+        display: flex;
+        justify-self: center;
+        padding: 5px;
+        margin: 0;
+        border-radius: 2px;
+        background-color: white;
+    }
+
+    .reservation-buttons>li:not(:last-child) {
+        display: flex;
+    }
+
+    .reservation-options {
+        align-self: center;
         width: fit-content;
     }
 
-    .logo {
-        font-size: var(--step-2);
+    .reservation-button {
+        border-radius: 0;
     }
 
-    .nav-links {
-        flex-direction: row;
+    .find-table-button {
+        width: 100%;
+        font-size: var(--step-1);
+        font-weight: 500;
     }
 
     .my-links {
@@ -456,5 +523,4 @@ p {
     .review-cards-container {
         grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     }
-
 }

@@ -16,7 +16,7 @@ export const createHomePage = () => {
     const welcomeTitle = document.createElement("h1");
     welcomeTitle.textContent = "Vince's Place"
     const welcomeSubTitle = document.createElement("p");
-    welcomeSubTitle.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rerum non veniam susvoluptatibus!";
+    welcomeSubTitle.textContent = "This is my restaurant page for the Odin Project assignment. It's responsive :)";
 
     welcome.append(welcomeTitle, welcomeSubTitle)
 
