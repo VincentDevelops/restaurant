@@ -4,6 +4,7 @@ export const createFooter = () => {
     footer.classList.add("container-footer", "flex");
 
     const myInformation = document.createElement("div");
+    myInformation.classList.add("my-information", "flex")
 
     const h1 = document.createElement("h1");
     h1.textContent = "Find Vince At";

@@ -343,9 +343,14 @@ p {
     .card-image-container {
         object-position: bottom;
     }
+
+    .footer-links {
+        width: 30%;
+    }
 }
 
-@media(min-width: 804px) {
+@media(min-width: 930px) {
+
 
     .button-menu {
         display: none;
@@ -358,6 +363,10 @@ p {
         width: 100%;
         justify-content: space-between;
 
+    }
+
+    .nav-links {
+        gap: 20px;
     }
 
     .nav-links>li {
@@ -380,16 +389,7 @@ p {
         flex-direction: row;
     }
 
-    .my-information {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: var(--padding);
-    }
-
     .my-links {
-        flex-direction: row;
         gap: 20px;
     }
 
@@ -400,4 +400,5 @@ p {
     .git-link {
         margin: 0;
     }
+
 }
